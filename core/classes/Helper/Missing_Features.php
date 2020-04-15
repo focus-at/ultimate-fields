@@ -77,12 +77,12 @@ class Missing_Features {
 
 		if( ! empty( $pro ) ) {
 			echo wpautop( __( 'Those features are only available in Ultimate Fields Pro. Please install and activate the plugin in order to enable them.', 'showcase' ) );
-			$this->list( $pro );
+			$this->featuresList( $pro );
 		}
 
 		if( ! empty( $generic ) ) {
 			echo wpautop( __( 'The following features are not a part of Ultimate Fields or Ultimate Fields Pro, meaning that an extension is required in order to enable them:', 'showcase' ) );
-			$this->list( $generic );
+			$this->featuresList( $generic );
 		}
 
 		echo '</div>';
@@ -136,7 +136,7 @@ class Missing_Features {
 	 *
 	 * @param mixed $features The features to print.
 	 */
-	protected function list( $features ) {
+	protected function featuresList( $features ) {
 		$items = array();
 
 		foreach( $features as $feature ) {
